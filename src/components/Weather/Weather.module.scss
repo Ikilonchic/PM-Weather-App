@@ -1,0 +1,83 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+
+  max-width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+
+  & &__current {
+    margin: 0 auto;
+
+    background-color: #ddd;
+    border-radius: 1rem;
+  }
+
+  & &__card {
+    min-width: 300px;
+
+    margin: .5rem;
+
+    border: 1px solid #ddd;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
+    
+    &::-webkit-scrollbar-button {
+      display: block;
+  
+      width: 5px;
+      height: 0px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+      background-color: #E4E3DE;
+    }
+
+    @media only screen and (max-width: 500px) {
+      flex-direction: column;
+      align-items: baseline;
+
+      margin-bottom: 1rem;
+      padding-bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    justify-content: flex-start;
+    align-items: center;
+
+    height: auto;
+
+    & &__current {
+      margin: 1rem auto;
+    }
+
+    & &__card {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
