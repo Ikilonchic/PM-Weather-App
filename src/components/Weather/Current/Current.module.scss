@@ -1,0 +1,47 @@
+.current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 2rem;
+
+  &__city, .temp-main {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .temp-feels {
+    margin-top: 5px;
+  }
+
+  &__icon {
+    width: 150px;
+    height: 150px;
+  }
+  
+  &__heading,
+  &__temp,
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  &__info {
+    .info__table {
+      display: grid;
+      grid-gap: 16px;
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+
+      margin-top: 2rem;
+
+      @media only screen and (max-width: 500px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+      }
+    }
+  }
+}
