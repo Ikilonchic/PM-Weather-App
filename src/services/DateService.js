@@ -1,12 +1,12 @@
 import dateReadableFormat from '../data/date_readable_format.json';
 
 export default class DateService {    
-    static normalizeTime(hours, minutes) {
+    static #normalizeTime = (hours, minutes) => {
         return `${(hours < 10 ? '0' : '') + hours.toString()}:${(minutes < 10 ? '0' : '') + minutes.toString()}`;
     }
 
     static getTimeCode(date = new Date()) {
-        return DateService.normalizeTime(date.getHours(), date.getMinutes());
+        return DateService.#normalizeTime(date.getHours(), date.getMinutes());
     }
 
     static getReadableFormat(lang, date = new Date()) {

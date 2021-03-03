@@ -39,11 +39,11 @@ const Current = ({
         <Property title={'Восход'} value={sunriseTime}/>
         <Property title={'Закат'} value={sunsetTime}/>
         <Property title={'Облачность'} value={clouds.all + '%'}/>
-        <Property title={'Видимость'} value={visibility}/>
-        <Property title={'Давление'} value={main.pressure}/>
+        <Property title={'Видимость'} value={visibility + 'm'}/>
+        <Property title={'Давление'} value={main.pressure + 'hPa'}/>
         <Property title={'Влажность'} value={main.humidity + '%'}/>
-        <Property title={'Скорость ветра'} value={wind.speed + ' km/h'}/>
-        <Property title={'Направление ветра'} value={wind.deg}/>
+        <Property title={'Скорость ветра'} value={wind.speed + 'm/h'}/>
+        <Property title={'Направление ветра'} value={wind.deg + '°'}/>
       </div>
     </div>
   </div>

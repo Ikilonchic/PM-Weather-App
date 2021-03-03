@@ -22,8 +22,6 @@ const Weather = ({ city }) => {
     setCurrent(current);
   };
 
-  console.log(current)
-
   if (!current || !daily) return <div className={styles['weather_placeholder']}>
     <Preloader />
   </div>;
